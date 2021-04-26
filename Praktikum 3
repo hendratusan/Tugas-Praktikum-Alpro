@@ -1,0 +1,41 @@
+#include <stdio.h>
+void main()
+{
+int stack[100];
+int top=-1;
+int pilih, i;
+do
+{
+printf("MENU\n");
+printf("1. PUSH\n2. POP\n3. VIEW\n4. EXIT\n");
+printf("Pilih = "); scanf("%d", &pilih);
+switch(pilih)
+{
+case 1://push
+if (top > 100)
+printf("Stack penuh!\n");
+else
+{    printf("Data = "); scanf("%d", &stack[top+1]);
+top++;
+}
+break;
+case 2://pop
+if (top < 0)
+printf("Stack kosong!\n");
+else
+{
+printf("Data keluar = %d\n", stack[top]);
+top=i--;
+}
+break;
+case 3://view
+for(i=top; i>=0; i--)
+printf("%d ", stack[i]);
+printf("\n");
+break;
+case 4:
+printf("Exit…\n");
+break;
+}
+}while (pilih!=4);
+}
